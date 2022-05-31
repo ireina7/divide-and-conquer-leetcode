@@ -19,6 +19,8 @@ If I fail, no regret.
 ## Setting
 To be practical, I only use *Java* and *C++* for all experiments (although Scala and Rust are better).
 The world has not been prepared for everything.
+- *Java* is terrible in the field of *abstraction* and *expression*.
+- *C++* is terrible at *clean abstraction* and full of traps.
 
 ## Strategies
 We can classify `divide-and-conquer` algorithms based on how they divide problems.
