@@ -14,6 +14,7 @@ If I fail, no regret.
 ## Spirit
 - Use `divide-and conquer` purely.
 - Ok if pass all leetcode tests.
+- Solutions should obey complexity (time and space) constraints of the problem.
 
 ## Setting
 To be practical, I only use *Java* and *C++* for all experiments (although Scala and Rust are better).
