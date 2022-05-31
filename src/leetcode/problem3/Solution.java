@@ -1,3 +1,6 @@
+package leetcode.problem3;
+import java.util.*;
+
 class Solution {
     // To avoid passing memo around...
     Map<Character, Integer> memo = new HashMap<>();

@@ -1,4 +1,9 @@
+package leetcode.problem1;
+import java.util.Map;
+import java.util.HashMap;
 
+/** https://leetcode.cn/problems/two-sum/
+ * */
 class Solution0 {
 
     /**

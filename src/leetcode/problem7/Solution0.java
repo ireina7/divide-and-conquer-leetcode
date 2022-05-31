@@ -1,4 +1,6 @@
-class Solution {
+package leetcode.problem7;
+
+class Solution0 {
     // type 0
     public int reverse(int x) {
         int rev = 0;

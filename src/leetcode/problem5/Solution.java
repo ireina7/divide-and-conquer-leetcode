@@ -1,3 +1,5 @@
+package leetcode.problem5;
+
 class Solution {
     /**
     Divide on the position of the center! (Type 0 | 1)

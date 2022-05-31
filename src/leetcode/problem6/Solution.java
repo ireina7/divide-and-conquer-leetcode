@@ -1,3 +1,5 @@
+package leetcode.problem6;
+
 class Solution {
     /**
     Type 0
