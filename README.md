@@ -11,9 +11,20 @@ I want to have a experiment on **solving every leetcode problem with divide and 
 If I can prove this, give me your star;
 If I fail, no regret.
 
+## Spirit
+- Use `divide-and conquer` purely.
+- Ok if pass all leetcode tests.
+
 ## Setting
 To be practical, I only use *Java* and *C++* for all experiments (although Scala and Rust are better).
 The world has not been prepared for everything.
+
+## Strategies
+We can classify `divide-and-conquer` algorithms based on how they divide problems.
+- Type 0: init part :+ the last element
+- Type 1: Equally divide into two parts
+
+For more details, please refer to the Strategy doc.
 
 ## Epilogue
 Fuck leetcode, long live `divide-and-conquer`!
