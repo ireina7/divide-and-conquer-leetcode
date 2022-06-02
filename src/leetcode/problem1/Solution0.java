@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /** https://leetcode.cn/problems/two-sum/
  * */
-class Solution0 {
+public class Solution0 {
 
     /**
       * This dividing is simple:
