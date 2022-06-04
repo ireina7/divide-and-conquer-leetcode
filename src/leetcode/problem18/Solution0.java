@@ -1,5 +1,6 @@
 package leetcode.problem18;
 import java.util.*;
+import java.util.stream.Stream;
 import java.util.stream.Collectors;
 
 /**
@@ -8,18 +9,21 @@ import java.util.stream.Collectors;
  * */
 public class Solution0 {
   List<Integer> nums;
+
   /**
    * So let's first build 2-sum.
    * */
-  List<List<Integer>> twoSum(int i, int j, int target) {
+  Stream<List<Integer>> twoSum(int i, int j, int target) {
     if(nums.size() < 2) {
-      return List.of();
+      return Stream.of();
     }
     if(nums.size() == 2) {
-      int sum = nums.stream().limit(2).reduce(0, (a, b) -> a + b);
-      return sum == target ? List.of(nums) : List.of();
+      int sum = nums.stream()
+          .limit(2)
+          .reduce(0, (a, b) -> a + b);
+      return sum == target ?Stream.of(nums) : Stream.of();
     }
-    List<List<Integer>> ans = new ArrayList<>();
+    Set<List<Integer>> ans = new HashSet<>();
     while(i < j) {
       int sum = nums.get(i) + nums.get(j);
       if(sum == target) {
@@ -32,39 +36,44 @@ public class Solution0 {
         j -= 1;
       }
     }
-    return ans;
+    return ans.stream();
   }
   /**
    * Let's do the job.
    * */
-  List<List<Integer>> dfs(int i, int j, int target, int n) {
-    if(j - i + 1 < n) return List.of();
-    if(n <= 0) return List.of();
+  Stream<List<Integer>> dfs(int i, int j, int target, int n) {
+    if(j - i + 1 < n) return Stream.of();
+    if(n <= 0) return Stream.of();
     if(n == 1) {
       return nums.contains(target)
-          ? List.of(List.of(target)) : List.of();
+          ? Stream.of(List.of(target)) : Stream.of();
     }
     if(n == 2) {
       return twoSum(i, j, target);
     }
     Set<List<Integer>> ans = new HashSet<>();
     for(int k = i; k <= j - n + 1; ++k) {
-      List<List<Integer>> rest =
-          dfs(k + 1, j, target - nums.get(k), n - 1);
-      for(var xs : rest) {
-        List<Integer> ys = new ArrayList<>(xs);
-        ys.add(0, nums.get(k));
-        ans.add(ys);
-      }
+      final int x = nums.get(k);
+      dfs(k + 1, j, target - x, n - 1)
+          .forEach( xs -> {
+              List<Integer> ys = new ArrayList<>(xs);
+              ys.add(0, x);
+              ans.add(ys);
+            }
+          );
     }
-    return ans.stream().collect(Collectors.toList());
+    return ans.stream();
   }
 
+  /**
+   * nSum application interface.
+   * */
   public List<List<Integer>> nSum(List<Integer> nums, int target, int n) {
     this.nums = nums.stream()
         .sorted()
         .collect(Collectors.toList());
-    return dfs(0, nums.size() - 1, target, n);
+    return dfs(0, nums.size() - 1, target, n)
+        .collect(Collectors.toList());
   }
 
   public List<List<Integer>> fourSum(int[] nums, int target) {
