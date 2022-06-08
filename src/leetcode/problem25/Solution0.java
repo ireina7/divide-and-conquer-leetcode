@@ -21,32 +21,45 @@ class ListNode {
 }
 
 public class Solution0 {
-    ListNode reverse(ListNode head, int k) {
-        return null;
-    }
     public ListNode reverseKGroup(ListNode head, int k) {
-        return reverse(head, k);
+        if(head == null) {
+            return null;
+        }
+        ListNode hat = new ListNode(0);
+        hat.next = head;
+        ListNode pre = hat;
+        
+        while (head != null) {
+            ListNode tail = pre;
+            for (int i = 0; i < k; ++i) {
+                tail = tail.next;
+                if (tail == null) {
+                    return hat.next;
+                }
+            }
+            ListNode next = tail.next;
+            ListNode[] reverse = myReverse(head, tail);
+            head = reverse[0];
+            tail = reverse[1];
+            pre.next = head;
+            tail.next = next;
+            pre = tail;
+            head = tail.next;
+        }
+        return hat.next;
+    }
+    
+    public ListNode[] myReverse(ListNode head, ListNode tail) {
+        ListNode prev = tail.next;
+        ListNode p = head;
+        while (prev != tail) {
+            ListNode next = p.next;
+            p.next = prev;
+            prev = p;
+            p = next;
+        }
+        return new ListNode[]{tail, head};
     }
 }
-
-//abstract class MIO<D, E, A> {
-//    public <D1, D extends D1, E1 extends E, B>
-//    MIO<D1, E1, B> flatMap(Function<A, MIO<D1, E1, B>> f) {
-//        return null;
-//    }
-//    public <A1 extends A>
-//    MIO<D, E, A1> widen() {
-//        return null;
-//    }
-//}
-
-
-
-
-
-
-
-
-
 
 

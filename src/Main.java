@@ -4,15 +4,12 @@ import java.util.stream.Stream;
 
 public class Main {
       public static void main(String[] args) {
-        var solution = new leetcode.problem18.Solution0();
-        var ans = solution.fourSum(new int[]{0, 0, 0, 0}, 0);
+        var solution = new leetcode.problem22.Solution0();
+        var ans = solution.generateParenthesis(6);
         System.out.println("Results:");
         System.out.println(ans.size());
         ans.stream().forEach(
-            xs -> {
-                xs.stream().forEach(x -> System.out.printf("%d, ", x));
-                System.out.println();
-            }
+            s -> System.out.println(s)
         );
       }
 }
