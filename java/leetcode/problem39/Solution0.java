@@ -15,13 +15,12 @@ public class Solution0 {
         if(target == 0) {
             return List.of(new ArrayList<>());
         }
-        if(i == cands.length) {
+        if(target < 0 || i == cands.length) {
             return List.of();
         }
         List<List<Integer>> ans = new ArrayList<>();
-        for(int j = 0, sum = 0; sum <= target; ++j) {
-            sum += cands[i];
-            var rest = dfs(i + 1, target - sum);
+        for(int j = 0; cands[i] * j <= target; ++j) {
+            var rest = dfs(i + 1, target - cands[i] * j);
             for(int k = 0; k < rest.size(); ++k) {
                 var xs = rest.get(k);
                 for(int cnt = j; cnt > 0; --cnt) {
