@@ -1,5 +1,5 @@
 # divide-and-conquer-leetcode
-*Divide and conquer all leetcode problems.*
+*Divide and conquer all leetcode problems.*  
 ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/1)
 
 ## Introduction
