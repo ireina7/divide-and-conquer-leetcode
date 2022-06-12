@@ -28,8 +28,9 @@ public class Solution0 {
             int sum = 0;
             int pre = 0;
             for(int p = 0; p < hs.length; ++p) {
-            
+                // this is underwork!
             }
         }
+        return 0;
     }
 }
