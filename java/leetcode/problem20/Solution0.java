@@ -17,14 +17,14 @@ public class Solution0 {
     Stack<Character> stk = new Stack<>();
     s.chars().boxed().map(i -> (char)(int)i).forEach(
         c -> {
-          if(stk.empty()) {
-            stk.push(c);
-          }
-          else if (match(stk.peek(), c)) {
-            stk.pop();
-          } else {
-            stk.push(c);
-          }
+            if(stk.empty()) {
+                stk.push(c);
+            }
+            else if (match(stk.peek(), c)) {
+                stk.pop();
+            } else {
+                stk.push(c);
+            }
         }
     );
     return stk.empty();
