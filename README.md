@@ -25,10 +25,10 @@ The world has not been prepared for everything.
 
 ## Strategies
 We can classify `divide-and-conquer` algorithms based on how they divide problems.
-- Type 0: init part :+ the last element
-- Type 1: Equally divide into two parts
+- *Type 0*: init part :+ the last element
+- *Type 1*: Equally divide into two parts
 
-For more details, please refer to the Strategy doc.
+For more details, please refer to [the strategy doc](./doc/Strategy.md).
 
 ## Epilogue
 Fuck leetcode, long live `divide-and-conquer`!
