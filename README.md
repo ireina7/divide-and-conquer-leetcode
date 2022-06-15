@@ -1,6 +1,6 @@
 # divide-and-conquer-leetcode
 *Divide and conquer all leetcode problems.*  
-![](https://us-central1-progress-markdown.cloudfunctions.net/progress/1)
+![](https://us-central1-progress-markdown.cloudfunctions.net/progress/2)
 
 ## Introduction
 Every one trys to learn various methods to solve leetcode problems.
