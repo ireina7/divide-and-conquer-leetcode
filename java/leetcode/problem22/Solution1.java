@@ -1,10 +1,13 @@
+package leetcode.problem22;
+import java.util.*;
+
 // 其他的for套了四层，我看得有点云里雾里。哭
 
 // 提供一种思路：
 // n的时候，从n-1的答案里，遍历插入()，从下标为0，一路插到最后。set去重。就是最后的答案。
 
 // 思路好理解，就是性能有点拉。
-class Solution {
+class Solution1 {
     HashMap<Integer, Set<String>> memo = new HashMap<>();
     public List<String> generateParenthesis(int n) {
         return new ArrayList(dfs(n));
