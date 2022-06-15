@@ -1,4 +1,10 @@
-class Solution {
+package leetcode.problem241;
+import java.util.*;
+
+/**
+ *
+ * */
+class Solution0 {
     HashMap<String, List<Integer>> memo = new HashMap<>();
     public List<Integer> diffWaysToCompute(String expression) {
         if(memo.containsKey(expression)) return memo.get(expression);
