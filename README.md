@@ -13,12 +13,14 @@ If I can prove this, give me your star;
 If I fail, no regret.
 
 ## Spirit
-- Use `divide-and conquer` purely.
+- Use `divide-and-conquer`.
 - Ok if pass all leetcode tests.
-- Solutions should obey complexity (time and space) constraints of the problem.
+- Solutions should obey complexity (time and space) constraints of the problem (if any).
 
 ## Setting
-To be practical, I only use *Java* and *C++* for all experiments (although Scala and Rust are better).
+To be practical, I shall use `Java`, `C++` and `TypeScript` (`JavaScript` as *subset* of `TypeScript`) 
+for all experiments (although Scala and Rust are better).
+
 The world has not been prepared for everything.
 - *Java* is terrible in the field of *abstraction* and *expression*.
 - *C++* is terrible at *clean abstraction* and full of traps.
