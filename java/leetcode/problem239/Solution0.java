@@ -1,10 +1,5 @@
 package leetcode.problem239;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * https://leetcode.cn/problems/sliding-window-maximum/
  * */
@@ -17,6 +12,13 @@ public class Solution0 {
     }
     /**
      * Just divide k!
+     * @param k the size of sliding window.
+     * @return maximum number of each sliding.
+     *
+     * consider one sliding group, we can divide it into 2 equal parts:
+     * |----k/2-----|----k/2----|
+     * If we have the sliding window max number results of window size k/2,
+     * then we get the maximum number in each sliding window of size k.
      * */
     int[] dfs(int k) {
         if(k == 1) return nums;
