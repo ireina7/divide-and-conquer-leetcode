@@ -1,5 +1,5 @@
 # Make recursions practical by converting to iterations
-*All recursions in computer codes can be converted to corresponding iterative form.*
+*All recursions in computer code can be converted to corresponding iterative form.*
 
 ## Machine level view
 In a sense, all recursion is an illusion. 
@@ -22,7 +22,7 @@ A typical one is shown here.
   + the values fo the actual parameters being passed to the function
   + space for the return value that the call will eventually send back to the caller
 
-For example, a function call foo(a, b+c, d);, the caller would
+For example, a function call `foo(a, b+c, d);`, the caller would
 1. Push state information, 
    including a return address and the current values of the top-of-stack and top-frame pointers.
 2. Evaluate each of the three parameter expressions, 
@@ -84,8 +84,62 @@ The general idea is:
 - main calculation of recursive routine gets put inside a loop
   + at start of loop, set variables from stack top and pop the stack
 
-#### Getting "*parameters*" from the stack
+#### Basic format
+We can think of a recursive function as being divided into several pieces, 
+separated by the recursive calls (codes below). 
+(This is a bit of an oversimplification, 
+since we aren’t considering what happens if the recursive calls are inside if or loop statements, 
+but those can be dealt with once you get the basic idea.)
+```java
+class RecursiveExample<Result, A, B> {
+    Result recursiveFoo (A param1, B param2) {
+        A local1;
+        B local2 = pure(param1, param2);
+        // code block 1
+        recursiveFoo(local1, local2);
+        // code block 2
+        recursiveFoo(param1, local2);
+        // code block 3
+        recursiveFoo(local1, param2);
+        // code block 4
+    }
+}
+```
+We can simulate calls to the recursive routine by saving, on a stack, 
+all parameters and local variables. In addition, 
+just as a “real” function call needs to know its return address, 
+we may need to save a “location” indicator to let us know which block of code 
+we’re supposed to execute upon a simulated return from a simulated recursive call.
 
+It helps, then, to have a convenient structure to 
+hold each set of information to go on the stack:
+```java
+import java.util.List;
+
+class StateInfo {
+    A param1;
+    B param2;
+    A local1;
+    B local2;
+    int location;
+}
+
+class Stack {
+    java.util.Stack<List<StateInfo>> stack;
+}
+```
+
+#### Getting "*parameters*" from the stack
+#### Simplifying
+#### Example: QuickSort
+
+## Epilogue
+Sometimes it’s really not worth converting algorithms from recursive to iterative. 
+Some elegant, simple recursive algorithms become horrendously complicated in iterative form. 
+On the other hand, as noted earlier, there are times when we have little choice (e.g., embedded systems).
+
+In these kinds of situations, 
+conversion from recursion to iteration may be the only way to get a system running.
 
 
 
