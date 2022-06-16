@@ -1,4 +1,4 @@
-# Guide for leetcode module
+# Guide for leetcode doc
 
 If you want to share your knowledge on leetcode solutions, please follow the following tips:
 - Organize the directory and file structure as the code source file (but no programming language difference).
