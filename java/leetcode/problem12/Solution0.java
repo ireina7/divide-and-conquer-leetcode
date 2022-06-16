@@ -1,7 +1,4 @@
 package leetcode.problem12;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 /** https://leetcode.cn/problems/integer-to-roman/
  *
@@ -14,7 +11,7 @@ import java.util.stream.IntStream;
  * D         500
  * M         1000
  * */
-public class Solution {
+public class Solution0 {
   String[] thousands = {"", "M", "MM", "MMM"};
   String[] hundreds  = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
   String[] tens      = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};

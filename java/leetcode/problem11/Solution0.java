@@ -1,9 +1,8 @@
 package leetcode.problem11;
-import java.util.*;
 
 /** https://leetcode.cn/problems/container-with-most-water/
  * */
-public class Solution {
+public class Solution0 {
   int[] hs;
   public int maxArea(int[] height) {
     this.hs = height;
