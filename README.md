@@ -24,13 +24,14 @@ for all experiments (although Scala and Rust are better).
 The world has not been prepared for everything.
 - *Java* is terrible in the field of *abstraction* and *expression*.
 - *C++* is terrible at *clean abstraction* and full of traps.
+- *TypeScript* lacks *Higher-kinded types*.
 
 ## Strategies
-We can classify `divide-and-conquer` algorithms based on how they divide problems.
-- *Type 0*: init part :+ the last element
-- *Type 1*: Equally divide into two parts
+Please refer to [the strategy doc](doc/strategy/Abstract.md).
 
-For more details, please refer to [the strategy doc](doc/strategy/Abstract.md).
+## Contribution
+Welcome to your contribution! 
+If you want to contribute, Please refer to [The contribution guide](doc/leetcode/README.md).
 
 ## Epilogue
 Fuck leetcode, long live `divide-and-conquer`!

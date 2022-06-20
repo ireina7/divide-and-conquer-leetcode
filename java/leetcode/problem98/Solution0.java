@@ -1,11 +1,18 @@
 package leetcode.problem98;
 
+/**
+ * https://leetcode.cn/problems/validate-binary-search-tree/
+ * */
 public class Solution0 {
     TreeNode max;
+    /**
+     * Very clever recursion.
+     * @param root the root of current tree & the max node which all nodes in root should > max
+     * @return whether is valid binary search tree & the max node.
+     * */
     public boolean isValidBST(TreeNode root) {
         if (root == null) return true;
-        boolean left = isValidBST(root.left);
-        if (!left) return false;
+        if (!isValidBST(root.left)) return false;
         if (max != null && root.val <= max.val) {
             return false;
         }
