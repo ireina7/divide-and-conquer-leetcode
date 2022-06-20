@@ -5,9 +5,8 @@ public class Solution0 {
     public Node connect(Node root) {
         if(root == null) return null;
         if(root.left != null) {
-            root.left.next = root.right != null
-                ? root.right
-                : next(root.next);
+            root.left.next =
+                root.right != null ? root.right : next(root.next);
         }
         if(root.right != null) {
             root.right.next = next(root.next);
