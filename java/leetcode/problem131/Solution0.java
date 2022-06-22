@@ -3,6 +3,9 @@ package leetcode.problem131;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://leetcode.cn/problems/palindrome-partitioning/
+ * */
 public class Solution0 {
     String s;
     public List<List<String>> partition(String s) {
