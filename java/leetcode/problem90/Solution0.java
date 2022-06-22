@@ -20,7 +20,7 @@ public class Solution0 {
         }
         var rest = dfs(i + 1);
         for (var xs : rest) {
-            if (!(i + 1 < nums.length && xs.size() > 0 && nums[i] == xs.get(0))) {
+            if (!(xs.size() > 0 && nums[i] == xs.get(0))) {
                 ans.add(new ArrayList<>(xs));
             }
             xs.add(0, nums[i]);
