@@ -1,5 +1,9 @@
 package leetcode.problem39;
 
+import core.Solution;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +12,7 @@ import java.util.List;
  * https://leetcode.cn/problems/combination-sum/
  * 用回溯法再做一遍。。。
  * */
-public class Solution1 {
+public class Solution1 implements Solution {
     List<List<Integer>> ans;
     List<Integer> path;
     int[] cands;
@@ -32,5 +36,15 @@ public class Solution1 {
             dfs(j, target - cands[j]);
             path.remove(path.size() - 1);
         }
+    }
+    
+    @Override
+    public String describe() {
+        return "Backtracking";
+    }
+    
+    @Override
+    public URL link() throws MalformedURLException {
+        return new URL("https://leetcode.cn/problems/combination-sum/");
     }
 }

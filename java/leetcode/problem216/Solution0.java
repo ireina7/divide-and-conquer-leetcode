@@ -1,13 +1,18 @@
 package leetcode.problem216;
 
+import core.Solution;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
-public class Solution0 {
-    List<Integer> path;
+public class Solution0 implements Solution {
+    LinkedList<Integer> path;
     List<List<Integer>> ans;
     public List<List<Integer>> combinationSum3(int k, int n) {
-        this.path = new ArrayList<>();
+        this.path = new LinkedList<>();
         this.ans = new ArrayList<>();
         dfs(1, k, n);
         return ans;
@@ -17,23 +22,21 @@ public class Solution0 {
             ans.add(new ArrayList<>(path));
             return;
         }
-        if (k <= 0 || n <= 0 || i >= 10) return;
-        for (int j = i; j <= 10 - k; ++j) {
+        if (i >= 10 || k < 0 || n < 0) return;
+        for (int j = i; j < 10; ++j) {
             path.add(j);
             dfs(j + 1, k - 1, n - j);
-            path.remove(path.size() - 1);
+            path.removeLast();
         }
     }
     
-    public static void main(String[] args) {
-        int k = 3;
-        int n = 7;
-        Solution0 solution = new Solution0();
-        var ans = solution.combinationSum3(k, n);
-        System.out.printf("size: %d\n", ans.size());
-        ans.forEach(xs -> {
-            xs.forEach(x -> System.out.printf("%d, ", x));
-            System.out.println();
-        });
+    @Override
+    public String describe() {
+        return "Back tracking";
+    }
+    
+    @Override
+    public URL link() throws MalformedURLException {
+        return new URL("https://leetcode.cn/problems/combination-sum-iii/");
     }
 }

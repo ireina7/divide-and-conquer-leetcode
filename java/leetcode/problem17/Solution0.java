@@ -1,11 +1,15 @@
 package leetcode.problem17;
+import core.Solution;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /** https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
  * */
-public class Solution0 {
+public class Solution0 implements Solution {
     Map<Character, String> mem = Map.of(
         '1', "",
         '2', "abc",
@@ -30,5 +34,15 @@ public class Solution0 {
             mem.get(digits.charAt(0)).chars().boxed().flatMap(
                 c -> dfs(digits.substring(1)).map(s -> (char)(int)c + s)
             );
+    }
+    
+    @Override
+    public String describe() {
+        return "Monad? Monad! Monad...";
+    }
+    
+    @Override
+    public URL link() throws MalformedURLException {
+        return new URL("https://leetcode.cn/problems/letter-combinations-of-a-phone-number/");
     }
 }

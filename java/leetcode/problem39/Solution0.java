@@ -1,11 +1,15 @@
 package leetcode.problem39;
+import core.Solution;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 
 /**
  * https://leetcode.cn/problems/combination-sum/
  * */
-public class Solution0 {
+public class Solution0 implements Solution {
     int[] cands;
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         this.cands = candidates;
@@ -30,5 +34,15 @@ public class Solution0 {
             }
         }
         return ans;
+    }
+    
+    @Override
+    public String describe() {
+        return "Naive recursion";
+    }
+    
+    @Override
+    public URL link() throws MalformedURLException {
+        return new URL("https://leetcode.cn/problems/combination-sum/");
     }
 }
