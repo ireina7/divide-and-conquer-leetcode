@@ -1,10 +1,14 @@
 package leetcode.problem77;
 
+import core.Solution;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Solution1 {
+public class Solution1 implements Solution {
     List<List<Integer>> ans = new ArrayList<>();
     LinkedList<Integer> path = new LinkedList<>();
     
@@ -28,5 +32,15 @@ public class Solution1 {
             dfs(i - 1, k - 1);
             path.removeLast();
         }
+    }
+    
+    @Override
+    public String describe() {
+        return "回溯解法";
+    }
+    
+    @Override
+    public URL link() throws MalformedURLException {
+        return new URL("https://leetcode.cn/problems/combinations/");
     }
 }

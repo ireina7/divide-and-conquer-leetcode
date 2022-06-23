@@ -1,5 +1,6 @@
 package core;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
@@ -13,5 +14,5 @@ public interface Solution {
     /**
      * Get the source URL of leetcode problem.
      * */
-    URL link();
+    URL link() throws MalformedURLException;
 }
