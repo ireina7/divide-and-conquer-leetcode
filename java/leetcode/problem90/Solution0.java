@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * https://leetcode.cn/problems/subsets-ii/
  * */
-public class Solution0 {
+public class Solution0 extends Solution {
     int[] nums;
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         Arrays.sort(nums);
@@ -27,5 +27,10 @@ public class Solution0 {
             ans.add(xs);
         }
         return ans;
+    }
+    
+    @Override
+    public String describe() {
+        return "Naive recursion";
     }
 }
