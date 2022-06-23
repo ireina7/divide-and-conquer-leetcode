@@ -1,29 +1,45 @@
 package leetcode.problem40;
+import core.Solution;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.*;
 
-public class Solution1 {
+public class Solution1 implements Solution {
     int[] cands;
     List<List<Integer>> ans;
-    List<Integer> selected;
+    LinkedList<Integer> cur;
+    
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
         this.cands = candidates;
         this.ans = new ArrayList<>();
-        this.selected = new ArrayList();
+        this.cur = new LinkedList<>();
         dfs(0, target);
         return ans;
     }
-    void dfs(int index, int target) {
+    void dfs(int i, int target) {
         if (target == 0) {
-            ans.add(new ArrayList<>(selected));
+            ans.add(new ArrayList<>(cur));
             return;
         }
-        for (int i = index; i < cands.length; ++i) {
-            if (target - cands[i] < 0) return;
-            if (i != index && cands[i] == cands[i - 1]) continue;
-            selected.add(cands[i]);
-            dfs(i + 1, target - cands[i]);
-            selected.remove(selected.size() - 1);
+        if (i >= cands.length) return;
+        for (int j = i; j < cands.length; ++j) {
+            if (j > i && cands[j] == cands[j - 1]) continue;
+            if (target < cands[j]) break;
+            cur.add(cands[j]);
+            dfs(j + 1, target - cands[j]);
+            cur.removeLast();
         }
+    }
+    
+    @Override
+    public String describe() {
+        return "Backtracking";
+    }
+    
+    @Override
+    public URL link() throws MalformedURLException {
+        return new URL("https://leetcode.cn/problems/combination-sum-ii/");
     }
 }

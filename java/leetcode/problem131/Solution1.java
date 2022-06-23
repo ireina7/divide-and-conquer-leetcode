@@ -1,6 +1,7 @@
 package leetcode.problem131;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -10,11 +11,11 @@ import java.util.List;
 public class Solution1 {
     String s;
     List<List<String>> ans;
-    List<String> cur;
+    LinkedList<String> cur;
     public List<List<String>> partition(String s) {
         this.s = s;
         this.ans = new ArrayList<>();
-        this.cur = new ArrayList<>();
+        this.cur = new LinkedList<>();
         dfs(0);
         return ans;
     }
@@ -26,11 +27,9 @@ public class Solution1 {
         for (int j = i; j < s.length(); ++j) {
             if (isPalindrome(s, i, j)) {
                 cur.add(s.substring(i, j + 1));
-            } else {
-                continue;
-            }
+            } else continue;
             dfs(j + 1);
-            cur.remove(cur.size() - 1);
+            cur.removeLast();
         }
     }
     //判断是否是回文串

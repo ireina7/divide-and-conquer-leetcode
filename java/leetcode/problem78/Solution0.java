@@ -3,7 +3,7 @@ package leetcode.problem78;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution0 {
+public class Solution0 extends Solution {
     int[] nums;
     public List<List<Integer>> subsets(int[] nums) {
         this.nums = nums;
@@ -22,5 +22,10 @@ public class Solution0 {
             ans.add(new ArrayList<>(xs));
         }
         return ans;
+    }
+    
+    @Override
+    public String describe() {
+        return "Naive but pure recursion";
     }
 }
