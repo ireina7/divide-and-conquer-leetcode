@@ -1,4 +1,4 @@
-package leetcode.problem332;
+package leetcode.problem51;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -7,7 +7,7 @@ import java.util.List;
 public abstract class Solution implements core.Solution {
     @Override
     public URL link() throws MalformedURLException {
-        return new URL("https://leetcode.cn/problems/reconstruct-itinerary/");
+        return new URL("https://leetcode.cn/problems/n-queens/");
     }
-    public abstract List<String> findItinerary(List<List<String>> tickets);
+    public abstract List<List<String>> solveNQueens(int n);
 }
