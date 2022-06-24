@@ -1,7 +1,6 @@
 package leetcode.problem445;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 
 public class Solution0 extends Solution {
     @Override
