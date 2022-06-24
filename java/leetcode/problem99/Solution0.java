@@ -3,12 +3,11 @@ package leetcode.problem99;
 public class Solution0 extends Solution {
     @Override
     public String describe() {
-        return null;
+        return "Naive recursion";
     }
     
     TreeNode pre;
-    TreeNode node1;
-    TreeNode node2;
+    TreeNode node1, node2;
     @Override
     public void recoverTree(TreeNode root) {
         this.pre = null;
@@ -21,6 +20,15 @@ public class Solution0 extends Solution {
     }
     void dfs(TreeNode root) {
         if (root == null) return;
-        
+        dfs(root.left);
+        if (pre != null && root.val <= pre.val) {
+            if (node1 == null) {
+                node1 = pre;
+                node2 = root;
+            }
+            else node2 = root;
+        }
+        pre = root;
+        dfs(root.right);
     }
 }
