@@ -7,7 +7,7 @@ import java.util.List;
 public class Solution0 extends Solution {
     @Override
     public String describe() {
-        return null;
+        return "Naive divide and conquer";
     }
     
     int[][] ranges;
