@@ -7,7 +7,7 @@ import java.util.Map;
 public class Solution0 extends Solution {
     @Override
     public String describe() {
-        return null;
+        return "naive divide and conquer";
     }
     
     int[] nums;
