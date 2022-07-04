@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class Solution0 extends Solution {
     @Override
     public String describe() {
-        return null;
+        return "Pure Divide and conquer!";
     }
     
     char[] s;
