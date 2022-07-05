@@ -21,7 +21,7 @@ public class Solution0 extends Solution {
      * 1 : 覆盖到了，但是该节点没有摄像头
      * 2 : 覆盖到了，且该节点有摄像头
      */
-    public int dfs(TreeNode root) {
+    int dfs(TreeNode root) {
         if (root == null) return 1;
         if (root.left == null && root.right == null) {
             return 0;
