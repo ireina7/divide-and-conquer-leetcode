@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Solution0 extends Solution {
     @Override
     public String describe() {
-        return null;
+        return "Recursion";
     }
     
     int[] prices;
