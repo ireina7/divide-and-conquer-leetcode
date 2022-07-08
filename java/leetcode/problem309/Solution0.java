@@ -9,6 +9,13 @@ public class Solution0 extends Solution {
     }
     
     int[] prices;
+    /** pre info of recursion
+     * pre[i][j]:
+     * - i == 0 : sold all
+     * - i == 1 : hold one in hand
+     * - j == 0 : previous index not sold
+     * - j == 1 : previous index sold
+     * */
     int[][] pre;
     final int minusInf = Integer.MIN_VALUE;
     @Override
