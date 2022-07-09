@@ -16,3 +16,5 @@ public interface Solution {
      * */
     URL link() throws MalformedURLException;
 }
+
+
