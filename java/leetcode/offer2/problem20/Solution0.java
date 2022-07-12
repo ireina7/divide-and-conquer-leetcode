@@ -8,7 +8,7 @@ import java.util.Map;
 public class Solution0 extends Solution {
     @Override
     public String describe() {
-        return null;
+        return "Dynamic programming";
     }
     
     @Override
@@ -22,10 +22,7 @@ public class Solution0 extends Solution {
             if (pos.containsKey(s.charAt(i))) {
                 List<Integer> ps = pos.get(s.charAt(i));
                 for (int k : ps) {
-                    if (
-                        k + 1 == i ||
-                            k + 1 <= i - 1 && mem[k + 1][i - 1] == true
-                    ) {
+                    if (k + 1 == i || k + 1 <= i - 1 && mem[k + 1][i - 1]) {
                         ans += 1;
                         mem[k][i] = true;
                     }
