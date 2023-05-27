@@ -18,12 +18,13 @@ If I fail, no regret.
 - Solutions should obey complexity (time and space) constraints of the problem (if any).
 
 ## Setting
-To be practical, I shall use `Java`, `C++` and `TypeScript` (`JavaScript` as *subset* of `TypeScript`) 
+To be practical, I shall use `Java`, `C++`, `Go` and `TypeScript` (`JavaScript` as *subset* of `TypeScript`) 
 for all experiments (although Scala and Rust are better).
 
 The world has not been prepared for everything.
 - *Java* is terrible in the field of *abstraction* and *expression*.
 - *C++* is terrible at *clean abstraction* and full of traps.
+- *Go* is fine but lack higher-rank-polymorphism(generic method).
 - *TypeScript* lacks *Higher-kinded types*.
 
 ## Strategies
