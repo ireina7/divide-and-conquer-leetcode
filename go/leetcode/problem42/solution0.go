@@ -3,8 +3,8 @@ package problem42
 type Solution0 struct{}
 
 func (self *Solution0) Trap(hs []int) int {
-
-	return 0
+	ans, _ := self.dfs(hs)
+	return ans
 }
 
 func (self *Solution0) dfs(hs []int) (int, []int) {
@@ -16,13 +16,28 @@ func (self *Solution0) dfs(hs []int) (int, []int) {
 	w := 0 // current water
 	g := 0 // ground height
 	for len(bs) > 0 {
-		if bs[0] <= h {
-			w += bs[0] * (bs[0] - g)
-			g = bs[0]
-			bs[0] = 0
+		i := bs[0] + 1
+		w += (i - 1) * (min(hs[i], h) - g)
+		if hs[i] <= h {
+			g = hs[i]
+			bs = bs[1:]
 		} else {
+			for j := 0; j < len(bs); j++ { // Can be further optimized
+				bs[j] += 1
+			}
+			bs = append([]int{0}, bs...)
 			break
 		}
 	}
-	return ans, bs
+	if len(bs) == 0 {
+		bs = []int{0}
+	}
+	return ans + w, bs
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
 }
