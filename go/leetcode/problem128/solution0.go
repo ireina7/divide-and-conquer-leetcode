@@ -11,7 +11,6 @@ func NewSolution0() *Solution0 {
 	}
 }
 
-// TODO 重构
 func (self *Solution0) LongestConsecutive(nums []int) int {
 	if len(nums) == 0 {
 		return 0
