@@ -19,12 +19,12 @@ If I fail, no regret.
 
 ## Setting
 To be practical, I shall use `Java`, `C++`, `Go` and `TypeScript` (`JavaScript` as *subset* of `TypeScript`) 
-for all experiments (although Scala and Rust are better).
+for all experiments (although `Scala` and `Rust` are better?).
 
 The world has not been prepared for everything.
 - *Java* is terrible in the field of *abstraction* and *expression*.
 - *C++* is terrible at *clean abstraction* and full of traps.
-- *Go* is fine but lack higher-rank-polymorphism(generic method).
+- *Go* is fine but lack higher-rank-polymorphism(generic method), but still can be used to model...
 - *TypeScript* lacks *Higher-kinded types*.
 
 ## Strategies
