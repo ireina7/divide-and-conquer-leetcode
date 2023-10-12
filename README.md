@@ -18,14 +18,15 @@ If I fail, no regret.
 - Solutions should obey complexity (time and space) constraints of the problem (if any).
 
 ## Setting
-To be practical, I shall use `Java`, `C++`, `Go` and `TypeScript` (`JavaScript` as *subset* of `TypeScript`) 
-for all experiments (although `Scala` and `Rust` are better?).
+To be practical, I shall use `Java`, `C++`, `Rust`, `Go` and `TypeScript` (`JavaScript` as *subset* of `TypeScript`) 
+for all experiments(may have `Scala` and `Haskell` some day).
 
 The world has not been prepared for everything.
 - *Java* is terrible in the field of *abstraction* and *expression*.
 - *C++* is terrible at *clean abstraction* and full of traps.
-- *Go* is fine but lack higher-rank-polymorphism(generic method), but still can be used to model...
+- *Go* lacks generic method and full of traps.
 - *TypeScript* lacks *Higher-kinded types*.
+- *Rust* is fine but currently lacks mature ecosystem.
 
 ## Strategies
 Please refer to [the strategy doc](doc/strategy/Abstract.md).
