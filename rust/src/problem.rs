@@ -23,6 +23,7 @@ struct Search<'a> {
     i: usize,
 }
 
+#[allow(dead_code)]
 impl<'a> Problem for Search<'a> {
     type Output = usize;
     type Space<A> = Option<A>;
