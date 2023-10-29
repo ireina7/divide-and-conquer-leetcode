@@ -30,6 +30,7 @@ The world has not been prepared for everything.
 
 ## Strategies
 Please refer to [the strategy doc](doc/strategy/Abstract.md).
+I wrote a brief guide on [divide-and-conquer all problems](https://ireina7.github.io/blogseq/#/page/leetcode%E7%AE%97%E6%B3%95%E9%80%9A%E7%94%A8%E6%9E%84%E9%80%A0%E5%88%9D%E6%AD%A5)
 
 ## Contribution
 Welcome to your contribution! 
