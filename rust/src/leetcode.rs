@@ -4,6 +4,7 @@ pub mod problem215;
 pub mod problem226;
 pub mod problem238;
 pub mod problem239;
+pub mod problem274;
 pub mod problem42;
 pub mod problem46;
 pub mod problem543;
