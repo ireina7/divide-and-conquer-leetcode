@@ -1,5 +1,6 @@
 pub mod problem102;
 pub mod problem108;
+pub mod problem155;
 pub mod problem215;
 pub mod problem226;
 pub mod problem238;
